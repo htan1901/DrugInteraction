@@ -10,22 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/teal_700">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Tương tác thuốc"
-            android:textSize="35dp"
-            android:textColor="@color/white"
-            android:textAlignment="center"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="739dp">
+        android:layout_height="790dp">
 
         <TextView
             android:layout_width="match_parent"
