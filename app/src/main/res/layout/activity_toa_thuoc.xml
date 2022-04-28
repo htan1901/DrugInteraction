@@ -1,25 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--ACTIVITY HIỂN THỊ CHI TIẾT MỘT TOA THUỐC-->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/teal_200"
+        android:gravity="start"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/ic_back" />
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:text="Toa thuốc 1"
-        android:textSize="35sp"
+        android:text="Tên toa thuốc"
+        android:textSize="30sp"
         android:textAlignment="center"
+        android:gravity="center_vertical"
         android:textColor="@color/black"
         android:textStyle="bold"
-        />
+        tools:ignore="RtlCompat" />
 
     <ListView
+        android:id="@+id/list_view_loai_thuoc"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="500dp"
+        tools:listitem="@layout/list_view_item_loai_thuoc" />
 
-        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:text="Ngày tái khám: 20/20/3000"
+        android:textSize="20sp" />
+
 
 </LinearLayout>

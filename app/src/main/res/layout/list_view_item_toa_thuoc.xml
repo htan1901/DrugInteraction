@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--MỘT DÒNG CỦA DANH SÁCH TOA THUỐC-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/toa_thuoc_lv_item_stt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1."
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/toa_thuoc_lv_item_ten_toa_thuoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên toa thuốc"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/toa_thuoc_lv_item_stt"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="15dp" />
+
+    <TextView
+        android:id="@+id/toa_thuoc_lv_item_ngay_tai_kham"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tái khám ngày 20/20/3000"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/toa_thuoc_lv_item_ten_toa_thuoc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

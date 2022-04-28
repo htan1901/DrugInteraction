@@ -15,8 +15,7 @@
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
-            />
+            tools:listitem="@layout/list_view_item_toa_thuoc" />
 
     </LinearLayout>
 
@@ -32,7 +31,15 @@
             android:layout_width="55dp"
             android:layout_height="55dp"
             android:layout_gravity="center"
+            android:layout_marginRight="10dp"
             android:background="@drawable/ic_add"/>
+        <Button
+            android:id="@+id/main_screen_button_view_interaction"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_warning"
+            android:layout_marginLeft="10dp"/>
 
     </LinearLayout>
 
