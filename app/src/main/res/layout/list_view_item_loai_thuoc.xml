@@ -8,7 +8,7 @@
     android:padding="15dp">
 
     <TextView
-        android:id="@+id/lv_item_stt"
+        android:id="@+id/loai_thuoc_lv_item_stt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1."
@@ -18,29 +18,29 @@
         app:layout_constraintBaseline_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/lv_item_ten_thuoc"
+        android:id="@+id/loai_thuoc_lv_item_ten_thuoc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tên thuốc"
         android:textStyle="bold"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/lv_item_stt"
+        app:layout_constraintStart_toEndOf="@id/loai_thuoc_lv_item_stt"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginLeft="15dp" />
 
     <TextView
-        android:id="@+id/lv_item_so_luong"
+        android:id="@+id/loai_thuoc_lv_item_so_luong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="65"
         android:textStyle="bold"
         android:textSize="20sp"
-        app:layout_constraintRight_toLeftOf="@id/lv_item_don_vi"
+        app:layout_constraintRight_toLeftOf="@id/loai_thuoc_lv_item_don_vi"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginRight="10dp"/>
 
     <TextView
-        android:id="@+id/lv_item_don_vi"
+        android:id="@+id/loai_thuoc_lv_item_don_vi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="viên"
@@ -56,7 +56,7 @@
         android:text="Ngày uống 3 lần, mỗi lần một viên, sau khi ăn"
         android:textSize="10sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/lv_item_ten_thuoc"
+        app:layout_constraintTop_toBottomOf="@id/loai_thuoc_lv_item_ten_thuoc"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"/>

@@ -1,27 +1,27 @@
-package com.example.myapplication.data_objects;
+package com.example.myapplication.models;
 
 import java.util.ArrayList;
 import java.util.Date;
 
 public class ToaThuoc {
-    private String title;
+    private String tieuDe;
     private Date ngayTaiKham;
     private ArrayList<Thuoc> loaiThuoc;
 
     public ToaThuoc() { }
 
     public ToaThuoc(String title, Date ngayTaiKham, ArrayList<Thuoc> loaiThuoc) {
-        this.title = title;
+        this.tieuDe = title;
         this.ngayTaiKham = ngayTaiKham;
         this.loaiThuoc = loaiThuoc;
     }
 
-    public String getTitle() {
-        return title;
+    public String getTieuDe() {
+        return tieuDe;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setTieuDe(String tieuDe) {
+        this.tieuDe = tieuDe;
     }
 
     public Date getNgayTaiKham() {

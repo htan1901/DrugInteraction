@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/toa_thuoc_lv_item_ten_toa_thuoc"
+        android:id="@+id/toa_thuoc_lv_item_tieu_de"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tên toa thuốc"
@@ -35,7 +35,7 @@
         android:text="Tái khám ngày 20/20/3000"
         android:textSize="10sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/toa_thuoc_lv_item_ten_toa_thuoc"
+        app:layout_constraintTop_toBottomOf="@id/toa_thuoc_lv_item_tieu_de"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"/>

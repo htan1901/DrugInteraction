@@ -1,4 +1,4 @@
-package com.example.myapplication.data_objects;
+package com.example.myapplication.models;
 
 public class Thuoc {
     private String tenThuoc;
