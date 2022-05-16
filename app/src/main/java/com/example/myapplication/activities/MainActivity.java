@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         themToaThuocButton.setOnClickListener(view -> {
             Intent themToaThuocNavigationIntent = new Intent(MainActivity.this, ThemToaThuocActivity.class);
             startActivity(themToaThuocNavigationIntent);
+
         });
 
     }
