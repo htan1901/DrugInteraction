@@ -35,7 +35,7 @@
     <ListView
         android:id="@+id/list_view_loai_thuoc"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="660dp"
         tools:listitem="@layout/list_view_item_loai_thuoc" />
 
     <TextView
@@ -44,7 +44,7 @@
         android:layout_marginLeft="10dp"
         android:gravity="center_vertical"
         android:text="Ngày tái khám: 20/20/3000"
-        android:textSize="20sp" />
+        android:textSize="15sp" />
 
 
 </LinearLayout>

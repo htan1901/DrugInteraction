@@ -9,6 +9,7 @@ import com.example.myapplication.R;
 import com.example.myapplication.models.ToaThuoc;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class ToaThuocAdapter extends BaseAdapter {
     private ArrayList<ToaThuoc> listToaThuoc = new ArrayList<>();
@@ -47,7 +48,8 @@ public class ToaThuocAdapter extends BaseAdapter {
         TextView taiKham = toaThuocView.findViewById(R.id.toa_thuoc_lv_item_ngay_tai_kham);
         soThuTu.setText(i +1 + ". ");
         tieuDe.setText(toaThuoc.getTieuDe());
-        taiKham.setText(toaThuoc.getNgayTaiKham().toString());
+        Date ngayTaiKham = toaThuoc.getNgayTaiKham();
+        taiKham.setText(ngayTaiKham.getDay() + "/" + ngayTaiKham.getMonth() + "/" + ngayTaiKham.getYear());
         return toaThuocView;
     }
 }

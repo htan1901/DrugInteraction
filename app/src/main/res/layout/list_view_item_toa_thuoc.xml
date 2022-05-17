@@ -29,14 +29,27 @@
         android:layout_marginLeft="15dp" />
 
     <TextView
-        android:id="@+id/toa_thuoc_lv_item_ngay_tai_kham"
+        android:id="@+id/NGAY_TAI_KHAM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tái khám ngày 20/20/3000"
+        android:text="Tái khám: "
         android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/toa_thuoc_lv_item_tieu_de"
+        app:layout_constraintRight_toLeftOf="@id/toa_thuoc_lv_item_ngay_tai_kham"
         app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/toa_thuoc_lv_item_ngay_tai_kham"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20/20/3000"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/toa_thuoc_lv_item_tieu_de"
+        app:layout_constraintLeft_toRightOf="@id/NGAY_TAI_KHAM"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"/>
 

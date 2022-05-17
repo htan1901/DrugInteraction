@@ -3,14 +3,12 @@ package com.example.myapplication.models;
 public class Thuoc {
     private String tenThuoc;
     private String donViTinh;
-    private String lieuDung;
 
     public Thuoc() {}
 
-    public Thuoc(String tenThuoc, String donViTinh, String lieuDung) {
+    public Thuoc(String tenThuoc, String donViTinh) {
         this.tenThuoc = tenThuoc;
         this.donViTinh = donViTinh;
-        this.lieuDung = lieuDung;
     }
 
     public String getTenThuoc() {
@@ -21,9 +19,6 @@ public class Thuoc {
         return donViTinh;
     }
 
-    public String getLieuDung() {
-        return lieuDung;
-    }
 
     public void setTenThuoc(String tenThuoc) {
         this.tenThuoc = tenThuoc;
@@ -33,7 +28,4 @@ public class Thuoc {
         this.donViTinh = donViTinh;
     }
 
-    public void setLieuDung(String lieuDung) {
-        this.lieuDung = lieuDung;
-    }
 }
