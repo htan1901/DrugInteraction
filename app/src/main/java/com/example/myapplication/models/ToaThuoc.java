@@ -1,20 +1,19 @@
 package com.example.myapplication.models;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Map;
 
 public class ToaThuoc {
     private String tieuDe;
-    private Date ngayTaiKham;
-    private ArrayList<ToaThuocItem> loaiThuoc;
+    private LocalDate ngayTaiKham;
+    private ArrayList<LoaiThuoc> danhSachLoaiThuoc;
 
     public ToaThuoc() { }
 
-    public ToaThuoc(String title, Date ngayTaiKham,ArrayList<ToaThuocItem> loaiThuoc) {
+    public ToaThuoc(String title, LocalDate ngayTaiKham,ArrayList<LoaiThuoc> loaiThuoc) {
         this.tieuDe = title;
         this.ngayTaiKham = ngayTaiKham;
-        this.loaiThuoc = loaiThuoc;
+        this.danhSachLoaiThuoc = loaiThuoc;
     }
 
     public String getTieuDe() {
@@ -25,19 +24,19 @@ public class ToaThuoc {
         this.tieuDe = tieuDe;
     }
 
-    public Date getNgayTaiKham() {
+    public LocalDate getNgayTaiKham() {
         return ngayTaiKham;
     }
 
-    public void setNgayTaiKham(Date ngayTaiKham) {
+    public void setNgayTaiKham(LocalDate ngayTaiKham) {
         this.ngayTaiKham = ngayTaiKham;
     }
 
-    public ArrayList<ToaThuocItem> getLoaiThuoc() {
-        return loaiThuoc;
+    public ArrayList<LoaiThuoc> getDanhSachLoaiThuoc() {
+        return danhSachLoaiThuoc;
     }
 
-    public void setLoaiThuoc(ArrayList<ToaThuocItem> loaiThuoc) {
-        this.loaiThuoc = loaiThuoc;
+    public void setDanhSachLoaiThuoc(ArrayList<LoaiThuoc> danhSachLoaiThuoc) {
+        this.danhSachLoaiThuoc = danhSachLoaiThuoc;
     }
 }

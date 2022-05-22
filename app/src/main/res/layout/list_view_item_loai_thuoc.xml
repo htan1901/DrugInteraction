@@ -51,6 +51,7 @@
         android:layout_marginRight="30dp" />
 
     <TextView
+        android:id="@+id/loai_thuoc_lv_item_lieu_dung"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ngày uống 3 lần, mỗi lần một viên, sau khi ăn"

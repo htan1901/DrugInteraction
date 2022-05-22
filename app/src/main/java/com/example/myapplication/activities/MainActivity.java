@@ -6,19 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.myapplication.R;
 import com.example.myapplication.adapters.ToaThuocAdapter;
-import com.example.myapplication.models.Thuoc;
 import com.example.myapplication.models.ToaThuoc;
 import com.example.myapplication.models.sample_data.ToaThuocData;
-
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +29,13 @@ public class MainActivity extends AppCompatActivity {
         listViewToaThuoc.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Bundle toaThuocFromMain = new Bundle();
+                ToaThuoc toaThuocHienTai = (ToaThuoc) adapterView.getItemAtPosition(i);
+                toaThuocFromMain.putString("tieuDe", toaThuocHienTai.getTieuDe());
+                toaThuocFromMain.putString("ngayTaiKham", toaThuocHienTai.getNgayTaiKham().toString());
+                toaThuocFromMain.putParcelableArrayList("danhSachLoaiThuoc", toaThuocHienTai.getDanhSachLoaiThuoc());
                 Intent intent = new Intent(MainActivity.this, ToaThuocActivity.class);
+                intent.putExtra("data", toaThuocFromMain);
                 startActivity(intent);
             }
         });
