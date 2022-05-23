@@ -7,8 +7,10 @@ import android.widget.TextView;
 
 import com.example.myapplication.R;
 import com.example.myapplication.models.ToaThuoc;
+import com.example.myapplication.utils.Utils;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class ToaThuocAdapter extends BaseAdapter {
     private ArrayList<ToaThuoc> listToaThuoc = new ArrayList<>();

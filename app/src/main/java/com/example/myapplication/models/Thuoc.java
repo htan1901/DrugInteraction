@@ -1,17 +1,30 @@
 package com.example.myapplication.models;
 
-public class Thuoc {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Thuoc implements Parcelable {
     private String tenThuoc;
     private String donViTinh;
-    private String lieuDung;
 
     public Thuoc() {}
 
-    public Thuoc(String tenThuoc, String donViTinh, String lieuDung) {
+    public Thuoc(String tenThuoc, String donViTinh) {
         this.tenThuoc = tenThuoc;
         this.donViTinh = donViTinh;
-        this.lieuDung = lieuDung;
     }
+
+    public static final Creator<Thuoc> CREATOR = new Creator<Thuoc>() {
+        @Override
+        public Thuoc createFromParcel(Parcel in) {
+            return new Thuoc(in);
+        }
+
+        @Override
+        public Thuoc[] newArray(int size) {
+            return new Thuoc[size];
+        }
+    };
 
     public String getTenThuoc() {
         return tenThuoc;
@@ -21,9 +34,6 @@ public class Thuoc {
         return donViTinh;
     }
 
-    public String getLieuDung() {
-        return lieuDung;
-    }
 
     public void setTenThuoc(String tenThuoc) {
         this.tenThuoc = tenThuoc;
@@ -33,7 +43,20 @@ public class Thuoc {
         this.donViTinh = donViTinh;
     }
 
-    public void setLieuDung(String lieuDung) {
-        this.lieuDung = lieuDung;
+    public Thuoc(Parcel in) {
+        this.tenThuoc = in.readString();
+        this.donViTinh = in.readString();
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(tenThuoc);
+        parcel.writeString(donViTinh);
+
     }
 }
