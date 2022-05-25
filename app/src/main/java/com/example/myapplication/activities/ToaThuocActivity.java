@@ -2,6 +2,8 @@ package com.example.myapplication.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -23,6 +25,7 @@ public class ToaThuocActivity extends AppCompatActivity {
         TextView tieuDe = findViewById(R.id.tieu_de_toa_thuoc);
         TextView ngayTaiKham = findViewById(R.id.toa_thuoc_ngay_tai_kham);
         ListView danhSachThuoc = findViewById(R.id.lv_loai_thuoc);
+        Button back = findViewById(R.id.toa_thuoc_back);
 
         Intent intent = getIntent();
         Bundle dataFromMain = intent.getBundleExtra("data");
@@ -33,5 +36,11 @@ public class ToaThuocActivity extends AppCompatActivity {
         tieuDe.setText(strTieuDe);
         ngayTaiKham.setText(strNgayTaiKham);
         danhSachThuoc.setAdapter(thuocAdapter);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 }
