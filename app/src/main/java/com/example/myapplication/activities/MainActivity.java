@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.example.myapplication.R;
@@ -19,11 +21,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        View decorView = getWindow().getDecorView();
-        int uiOption = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOption);
+
         ListView listViewToaThuoc = findViewById(R.id.list_view_toa_thuoc);
         ToaThuocAdapter toaThuocAdapter = new ToaThuocAdapter(ToaThuocData.data);
+        ImageButton chuyenDenActivityThemToaThuocButton = findViewById(R.id.main_activity_button_add);
 
         listViewToaThuoc.setAdapter(toaThuocAdapter);
         listViewToaThuoc.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -34,9 +35,16 @@ public class MainActivity extends AppCompatActivity {
                 toaThuocFromMain.putString("tieuDe", toaThuocHienTai.getTieuDe());
                 toaThuocFromMain.putString("ngayTaiKham", toaThuocHienTai.getNgayTaiKham().toString());
                 toaThuocFromMain.putParcelableArrayList("danhSachLoaiThuoc", toaThuocHienTai.getDanhSachLoaiThuoc());
-                Intent intent = new Intent(MainActivity.this, ToaThuocActivity.class);
-                intent.putExtra("data", toaThuocFromMain);
-                startActivity(intent);
+                Intent mainActivityToToaThuocActivity = new Intent(MainActivity.this, ToaThuocActivity.class);
+                mainActivityToToaThuocActivity.putExtra("data", toaThuocFromMain);
+                startActivity(mainActivityToToaThuocActivity);
+            }
+        });
+        chuyenDenActivityThemToaThuocButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mainActivityToThemToaThuocActivity = new Intent(MainActivity.this, ThemToaThuocActivity.class);
+                startActivity(mainActivityToThemToaThuocActivity);
             }
         });
     }

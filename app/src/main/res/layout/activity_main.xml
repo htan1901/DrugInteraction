@@ -16,7 +16,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/main_screen_button_navigation"
+            android:id="@+id/main_activity_button_navigation"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="start"
@@ -27,7 +27,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="790dp">
+        android:layout_height="650dp">
 
         <ListView
             android:id="@+id/list_view_toa_thuoc"
@@ -36,5 +36,21 @@
             tools:listitem="@layout/list_view_item_toa_thuoc"/>
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/main_activity_button_add"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_add"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rounded_corner"
+            android:scaleType="fitCenter"/>
+
+    </RelativeLayout>
 
 </LinearLayout>
